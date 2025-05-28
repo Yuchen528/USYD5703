@@ -1,27 +1,42 @@
-# Byte-compiled / optimized / DLL files
+cat > .gitignore << EOF
 __pycache__/
 *.py[cod]
-*.class
-# Virtual environment
+*$py.class
+
 venv/
 env/
-# AWS credentials
+
 *.pem
 *.key
 *.crt
 .aws/
-# Logs and temp
+
 *.log
 *.tmp
+
+output/
 temp_frames/
 high_diff_frames/
 key_frames/
-output/
 visual_changes/
 output_audio.wav
-# Jupyter Notebook checkpoints
+
+*.webm
+*.wav
+*.mp4
+
 .ipynb_checkpoints/
-# System files
+
 .DS_Store
 Thumbs.db
-.ssh/
+
+*.zip
+
+.ssh/id_rsa
+.ssh/id_rsa.pub
+.ssh/id_ed25519
+.ssh/id_ed25519.pub
+
+*.csv
+EOF
+
