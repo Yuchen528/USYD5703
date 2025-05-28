@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+# Virtual environment
+venv/
+env/
+# AWS credentials
+*.pem
+*.key
+*.crt
+.aws/
+# Logs and temp
+*.log
+*.tmp
+temp_frames/
+high_diff_frames/
+key_frames/
+output/
+visual_changes/
+output_audio.wav
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# System files
+.DS_Store
+Thumbs.db
