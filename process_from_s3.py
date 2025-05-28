@@ -15,7 +15,7 @@ output_prefix = "Output/Video Splitting"
 
 def download_file_from_s3(s3_path, local_path):
     s3.download_file(bucket_name, s3_path, local_path)
-    print(f"✅ 下载: {s3_path} -> {local_path}")
+    print(f"✅ download: {s3_path} -> {local_path}")
 
 def upload_folder_to_s3(local_folder, s3_folder_prefix):
     for root, _, files in os.walk(local_folder):
@@ -24,7 +24,7 @@ def upload_folder_to_s3(local_folder, s3_folder_prefix):
             relative_path = os.path.relpath(local_file_path, local_folder)
             s3_key = f"{s3_folder_prefix}/{relative_path}"
             s3.upload_file(local_file_path, bucket_name, s3_key)
-            print(f"⬆️ 上传: {local_file_path} -> s3://{bucket_name}/{s3_key}")
+            print(f"⬆️ uoload: {local_file_path} -> s3://{bucket_name}/{s3_key}")
 
 def extract_audio(video_path, audio_path):
     command = ["ffmpeg", "-i", video_path, "-q:a", "0", "-map", "a", audio_path, "-y"]
