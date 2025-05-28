@@ -24,3 +24,4 @@ output_audio.wav
 # System files
 .DS_Store
 Thumbs.db
+.ssh/
